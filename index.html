@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="snail.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="0.95" environment-image="legacy" exposure="2" camera-orbit="1026deg 86.86deg 0.3889m" field-of-view="30deg" autoplay>
+      <button class="Hotspot" slot="hotspot-3" data-surface="0 0 1205 1164 1167 0.233 0.262 0.505" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Snail Shell</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-surface="0 0 5177 5175 5225 0.542 0.293 0.165" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Snail body</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+  </body>
+</html>
